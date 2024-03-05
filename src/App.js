@@ -7,7 +7,8 @@ export default function App() {
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
-      .then((country) => setCountries(country));
+      .then((country) => setCountries(country))
+      .catch((e)=> console.log(e));
   }, []);
 
   return (
